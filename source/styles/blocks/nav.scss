@@ -1,0 +1,15 @@
+.nav{
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.nav__item{
+   list-style: none;
+}
+
+.nav__link{
+    color:$black;
+    text-decoration: none;
+}
