@@ -1,6 +1,6 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Виктория Радченко](https://up.htmlacademy.ru/adaptive-individual/2/user/1387943).
+* Студент: [Виктория](https://up.htmlacademy.ru/adaptive-individual/2/user/1387943).
 * Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
 
 ---
