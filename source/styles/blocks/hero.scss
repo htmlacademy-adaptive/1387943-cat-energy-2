@@ -1,12 +1,16 @@
+.hero{
+background-color: $green;
+font-family: Oswald;
+color:$white;
+}
+
 .hero__ttile{
-    font-family: Oswald;
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
 }
  
 .hero_subtitle{
-    font-family: Oswald;
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;

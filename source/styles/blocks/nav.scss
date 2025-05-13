@@ -13,3 +13,10 @@
     color:$black;
     text-decoration: none;
 }
+
+.nav__button{
+    width: 24px;
+    height: 24px;
+    mask-image: url("/icons/stack.svg#navigation");
+    background-color: $black;
+}
