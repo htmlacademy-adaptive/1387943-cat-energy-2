@@ -21,7 +21,7 @@
 .examples__container {
   @media (min-width: $desktop-width) {
     width: 100%;
-    background-color:#f2f2f2;
+    background-color: #f2f2f2;
   }
 }
 
@@ -92,7 +92,7 @@
   }
 }
 
-.examples__item{
+.examples__item {
   @include flex();
   position: relative;
 
@@ -112,7 +112,7 @@
   }
 }
 
-.examples__item{
+.examples__item {
   @include flex();
   position: relative;
 
@@ -131,8 +131,6 @@
     width: 158px;
   }
 }
-
-
 
 .examples__list {
   @include flex(row, space-between, center);
@@ -156,7 +154,7 @@
 }
 
 .examples__number {
-  font-family:$font-color;
+  font-family: $font-color;
   font-size: 24px;
   line-height: 24px;
   color: #000000;
@@ -189,11 +187,11 @@
 
     font-size: 14px;
     line-height: 14px;
-    background-color:$secondary-color;
+    background-color: $secondary-color;
   }
 
   @media (min-width: $desktop-width) {
-    background-color:#f2f2f2;
+    background-color: #f2f2f2;
   }
 }
 
@@ -272,8 +270,6 @@
   object-position: left;
   width: 140px;
   height: 256px;
-  
-
   @media (min-width: $tablet-width) {
     width: 280px;
     height: 512px;
@@ -292,4 +288,3 @@
     height: 512px;
   }
 }
-

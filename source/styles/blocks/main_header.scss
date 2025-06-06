@@ -147,13 +147,13 @@
   mask-image: url("../../icons/stack.svg#cat-energy-text-logo");
   cursor: pointer;
 
-  @media (max-width: $mobile-width-max){
+  @media (max-width: $mobile-width-max) {
     display: block;
-  width: 131px;
-  height: 25px;
-  background-color: #111111;
-  mask-image: url("../../icons/stack.svg#cat-energy-text-logo");
-  cursor: pointer;
+    width: 131px;
+    height: 25px;
+    background-color: #111111;
+    mask-image: url("../../icons/stack.svg#cat-energy-text-logo");
+    cursor: pointer;
   }
 }
 
@@ -165,4 +165,3 @@
 .logo-text-link:active {
   background-color: #6b6b6b;
 }
-

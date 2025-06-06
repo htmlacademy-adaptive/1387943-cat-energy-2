@@ -1,4 +1,4 @@
-@mixin font-face ($font-family, $font-weight, $font-style, $font-src) {
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
   @font-face {
     font-family: $font-family;
     font-weight: $font-weight;
@@ -8,18 +8,23 @@
   }
 }
 
-@mixin flex($direction:row, $justify:center, $align:center) {
+@mixin flex($direction: row, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
 }
 
-@mixin flex-property($justify-content: flex-start, $align-items: flex-start, $flex-flow: row wrap, $display: flex) {
-justify-content: $justify-content;
-align-items: $align-items;
-flex-flow: $flex-flow;
-display: $display;
+@mixin flex-property(
+  $justify-content: flex-start,
+  $align-items: flex-start,
+  $flex-flow: row wrap,
+  $display: flex
+) {
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-flow: $flex-flow;
+  display: $display;
 }
 
 @mixin content($width, $height, $display: block, $content: "") {
@@ -29,21 +34,20 @@ display: $display;
   content: $content;
 }
 
-
 @mixin centring-positioned-element {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-@mixin button{
+@mixin button {
   text-transform: uppercase;
-    color: #ffffff;
-    background-color: $main-color;
-    border: none;
-    padding: 10px;
-    font-family: Oswald, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    display: block;
+  color: #ffffff;
+  background-color: $main-color;
+  border: none;
+  padding: 10px;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
 }
