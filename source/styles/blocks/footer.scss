@@ -1,0 +1,92 @@
+.footer {
+  background-color: #f2f2f2;
+}
+
+.footer__container {
+  @include flex(column, space-between, center);
+
+  width: $mobile-container-width;
+  margin: 0 auto;
+  padding: 40px 0;
+  gap: 19px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+
+    width: $tablet-container-width;
+    padding: 57px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-container-width;
+    padding: 68px 0;
+  }
+}
+
+.footer__social {
+  @media (max-width: $mobile-width-max) {
+    padding: 20px 50px;
+
+    border-top: 1px solid  #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
+
+
+.footer__developer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    gap: 23px;
+    padding: 0;
+  }
+}
+
+.developer {
+  color: #444444;
+  text-decoration: none;
+  @media (max-width: $mobile-width-max){
+    color: #444444;
+  text-decoration: none;
+  margin-top: -8px;
+}
+}
+
+.developer::after{
+  content: "";
+  display: block;
+  mask-image: url("../../icons/stack.svg#academy-logo");;
+  background-color: #666666;
+  mask-size: 27px 34px;
+  mask-repeat: no-repeat;
+  width: 27px;
+  height: 34px;
+}
+
+.developer:hover::after{
+  background-color: $main-color;
+}
+
+.developer:active::after{
+  opacity: 0.3;
+}
+
+.developer__title{
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (max-width: $mobile-width-max){
+    font-size: 16px;
+  line-height: 20px;
+  margin-right: 138px;
+  }
+}
+
+.developer__title:active{
+  opacity: 0.3;
+}
