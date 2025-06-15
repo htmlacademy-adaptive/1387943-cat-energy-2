@@ -13,7 +13,7 @@
     flex-wrap: wrap;
 
     width: $desktop-container-width;
-    margin-bottom: 71px;
+    margin-bottom: 41px;
     padding-top: 50px;
   }
 }
@@ -31,7 +31,7 @@
 
   @media (min-width: $desktop-width) {
     width: 570px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     padding: 41px 52px 54px;
   }
 }

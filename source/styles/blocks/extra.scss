@@ -30,9 +30,7 @@
   line-height: 24px;
   color: #000000;
   background-color: $secondary-color;
-  box-shadow:
-    -40px 0 0 0 $secondary-color,
-    40px 0 0 0 $secondary-color;
+  box-shadow: -40px 0 0 0 $secondary-color, 40px 0 0 0 $secondary-color;
 
   &::before {
     content: "";

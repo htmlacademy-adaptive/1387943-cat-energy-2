@@ -25,7 +25,7 @@
   @media (min-width: $tablet-width) {
     @include flex(row, flex-start, center);
     flex-wrap: wrap;
-    width: 25%;
+    width: 30%;
     margin: 0;
   }
 }
@@ -139,24 +139,6 @@
   }
 }
 
-.logo-text-link {
-  display: block;
-  width: 129px;
-  height: 32px;
-  background-color: #111111;
-  mask-image: url("../../icons/stack.svg#cat-energy-text-logo");
-  cursor: pointer;
-
-  @media (max-width: $mobile-width-max) {
-    display: block;
-    width: 131px;
-    height: 25px;
-    background-color: #111111;
-    mask-image: url("../../icons/stack.svg#cat-energy-text-logo");
-    cursor: pointer;
-  }
-}
-
 .logo-text-link:hover,
 .logo-text-link:focus {
   background-color: #3e3e3e;
@@ -164,4 +146,35 @@
 
 .logo-text-link:active {
   background-color: #6b6b6b;
+}
+
+.logo-text-link {
+  display: block;
+  width: 120px;
+  height: 32px;
+  background-color: #111111;
+  mask-image: url("../../icons/stack.svg#cat-energy-text-logo");
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 102px;
+    height: 32px;
+    background-color: #111111;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 102px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 118px;
+  }
+}
+
+.main-header__logo-image-link:hover,
+.main-header__logo-image-link:focus {
+  opacity: 0.8;
+}
+
+.main-header__logo-image-link:active {
+  opacity: 0.6;
 }

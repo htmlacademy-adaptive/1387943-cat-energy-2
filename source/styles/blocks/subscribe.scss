@@ -28,9 +28,7 @@
   line-height: 24px;
   color: #000000;
   background-color: $secondary-color;
-  box-shadow:
-    -40px 0 0 0 $secondary-color,
-    40px 0 0 0 $secondary-color;
+  box-shadow: -40px 0 0 0 $secondary-color, 40px 0 0 0 $secondary-color;
 
   &::before {
     content: "";
@@ -119,4 +117,19 @@
 
 .subscribe__input:active {
   border: 2px solid #ff8282;
+}
+
+.subscribe__button {
+  @include button;
+  padding: 17px 82px;
+  font-size: 20px;  
+
+  @media (min-width: $tablet-width) {
+    width: 256px;
+    height: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
 }

@@ -25,7 +25,7 @@
 
 .footer__social {
   @media (max-width: $mobile-width-max) {
-    padding: 20px 50px;
+    padding: 15px 53px;
 
     border-top: 1px solid #d9d9d9;
     border-bottom: 1px solid #d9d9d9;
@@ -37,7 +37,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 40px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
@@ -46,46 +45,16 @@
   }
 }
 
-.developer {
-  color: #444444;
-  text-decoration: none;
-  @media (max-width: $mobile-width-max) {
-    color: #444444;
-    text-decoration: none;
-    margin-top: -8px;
-  }
-}
-
-.developer::after {
-  content: "";
+.footer__logo-link {
   display: block;
-  mask-image: url("../../icons/stack.svg#academy-logo");
-  background-color: #666666;
-  mask-size: 27px 34px;
-  mask-repeat: no-repeat;
-  width: 27px;
-  height: 34px;
-}
-
-.developer:hover::after {
-  background-color: $main-color;
-}
-
-.developer:active::after {
-  opacity: 0.3;
-}
-
-.developer__title {
-  font-size: 16px;
-  line-height: 20px;
+  width: 129px;
+  height: 32px;
+  background-color: #111111;
+  mask-image: url("../../icons/stack.svg#cat-energy-text-logo");
+  cursor: pointer;
 
   @media (max-width: $mobile-width-max) {
-    font-size: 16px;
-    line-height: 20px;
-    margin-right: 138px;
+    width: 131px;
+    height: 25px;
   }
-}
-
-.developer__title:active {
-  opacity: 0.3;
 }

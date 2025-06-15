@@ -1,49 +1,58 @@
 .examples {
   padding: 25px 0 40px;
   background-color: #eaeaea;
-
   @media (min-width: $tablet-width) {
     position: relative;
-    padding: 45px 0 0;
-
+    padding: 0 206px;
+    background: linear-gradient( to bottom, #ffffff 0% 25%,#f2f2f2 25% 100%);
     border-top: 1px solid #e6e6e6;
-    background-color: $secondary-color;
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    padding: 0;
-
+    background: linear-gradient( to bottom, #ffffff 0% 25%,#f2f2f2 25% 100%);
     border-top: none;
-  }
+    padding: 0 70px;
+  } 
 }
 
 .examples__container {
+  display:grid;
+  grid-template-columns: 1fr;
+  padding: 0;
+  width: 100%;
+  max-width: 1220px;
+  margin:0 auto;
+
   @media (min-width: $desktop-width) {
-    width: 100%;
-    background-color: #f2f2f2;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    
   }
 }
 
 .examples__sort {
-  width: $mobile-container-width;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     @include flex(row, space-between, center);
     flex-wrap: wrap;
-
-    width: $tablet-container-width;
-    margin-bottom: 255px;
+    margin-bottom: 106px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
     align-items: flex-start;
-
-    width: $desktop-container-width;
-    padding: 72px 0 70px;
+    padding: 72px 0;
     margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    margin: 0 auto;
+    margin-left: 18px;
+    
   }
 }
 
@@ -69,6 +78,7 @@
   @media (min-width: $desktop-width) {
     width: $desktop-container-width;
     margin-bottom: 75px;
+    grid-column: 1/-1;
   }
 }
 
@@ -108,27 +118,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 158px;
-  }
-}
-
-.examples__item {
-  @include flex();
-  position: relative;
-
-  width: 44%;
-  padding: 14px 0 18px;
-
-  border: 1px solid #cdcdcd;
-  border-radius: 5px;
-
-  @media (min-width: $tablet-width) {
-    width: 52%;
-    padding: 15px 0 18px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 158px;
+    width: 368px;
   }
 }
 
@@ -222,23 +212,6 @@
   }
 }
 
-.examples__background-container {
-  @media (min-width: $tablet-width) {
-    height: 462px;
-    background-color: #eaeaea;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: absolute;
-    height: 512px;
-    background-color: transparent;
-
-    top: 0;
-    left: 0;
-    margin-left: 54%;
-    transform: translateX(-8px);
-  }
-}
 
 .examples__image-container {
   position: relative;
@@ -249,19 +222,17 @@
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
     grid-template-columns: 280px 0 280px;
-
-    @include centring-positioned-element;
-    top: 67%;
-
     width: 560px;
   }
 
   @media (min-width: $desktop-width) {
-    position: static;
-    transform: translate(0, 0);
+    grid-template-columns:280px 0 280px;
+    width: 562px;
+    margin-top: -133px;
+    margin-left: -75px;
   }
+
 }
 
 .examples__before {
@@ -287,4 +258,86 @@
     width: 280px;
     height: 512px;
   }
+}
+
+.examples__button {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 2px solid #666666;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  cursor: pointer;
+}
+
+.examples__button::after {
+  content: "";
+  position: absolute;
+
+  @include centring-positioned-element;
+
+  width: 24px;
+  height: 18px;
+
+  mask-image: url("../../icons/stack.svg#slider-arrows");
+  mask-repeat: no-repeat;
+  background-color: #666666;
+}
+
+.examples__button::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  right: 16px;
+  width: 4px;
+  height: 256px;
+
+  background-image: linear-gradient( to bottom,#666666 110px, transparent 110px, transparent 147px,#666666 147px );
+
+  @media (min-width: $tablet-width) {
+    top: -240px;
+    height: 512px;
+    background-image: linear-gradient( to bottom, #666666 240px, transparent 240px, transparent 276px,#666666 276px);
+  }
+}
+
+.examples__button:hover {
+  border-color: $main-color;
+}
+
+.examples__button:hover::after {
+  background-color: $main-color;
+}
+
+.examples__button:hover::before {
+  background-image: linear-gradient( to bottom, $main-color 110px transparent 110px, transparent 147px, $main-color 147px );
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $main-color 240px, transparent 240px, transparent 276px, $main-color 276px);
+  }
+}
+
+.examples__button:active {
+  border-color: rgba(94, 170, 47, 0.6);
+}
+
+.examples__button:active::after {
+  background-color: rgba(94, 170, 47, 0.6);
+}
+
+.examples__button:active::before {
+  background-image: linear-gradient(to bottom, rgba(94, 170, 47, 0.6) 110px, transparent 110px, transparent 147px,rgba(94, 170, 47, 0.6) 147px);
+
+ @media (min-width: $tablet-width) {
+    background-image: linear-gradient( to bottom, rgba(94, 170, 47, 0.6) 240px, transparent 240px,transparent 276px,rgba(94, 170, 47, 0.6) 276px);
+  }
+}
+
+.examples__summary-price{
+  margin-left: 61px;
 }

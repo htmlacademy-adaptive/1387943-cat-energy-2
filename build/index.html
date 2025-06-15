@@ -10,6 +10,8 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <script src="scripts/index.js" defer="defer"></script>
 </head>
 
@@ -24,7 +26,6 @@
         </picture>
       </a>
       <a class="main-header__logo-text-link logo-text-link" href="index.html">
-        <img class="main-header__logo-images" src="/images/index/cat-energy-logo-text/cat-energy-logo-text-desktop.svg" width="117" height="33" alt="Надпись Кэт Энерджи">
       </a>
     </div>
     <nav class="main-header__nav main-header__nav--nojs main-nav">
@@ -109,36 +110,32 @@
           </dl>
           <p class="examples__description">Затраты на питание: <span class="examples__summary-price">15 000</span> руб.</p>
         </div>
+         <div class="examples__image-container">
+        <picture>
+          <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="images/index/cat-before/cat-before-tablet@1x.webp, images/index/cat-before/cat-before-tablet@2x.webp 2x">
+          <source width="280" height="256" type="image/webp" srcset="images/index/cat-before/cat-before-tablet@1x.webp, images/index/cat-before/cat-before-tablet@2x.webp 2x">
+
+          <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/index/cat-before/cat-before-tablet@1x.png, images/index/cat-before/cat-before-tablet@2x.png 2x">
+          <img class="examples__before" src="images/index/cat-before/cat-before-mobile@1x.png" width="280" height="256" srcset="images/index/cat-before/cat-before-mobile@2x.png" alt="Фотография толстого кота">
+        </picture>
+        <picture>
+          <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="images/index/cat-after/cat-after-tablet@1x.webp, images/index/cat-after/cat-after-tablet@2x.webp 2x">
+          <source width="280" height="256" type="image/webp" srcset="images/index/cat-after/cat-after-tablet@1x.webp, images/index/cat-after/cat-after-tablet@2x.webp 2x">
+
+          <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/index/cat-after/cat-after-tablet@1x.png, images/index/cat-after/cat-after-tablet@2x.png 2x">
+          <img class="examples__after" src="images/index/cat-after/cat-after-mobile@1x.png" width="280" height="256" srcset="images/index/cat-after/cat-after-mobile@2x.png" alt="Фотография стройного кота">
+        </picture>
+        <button class="examples__button" type="button"><span class="visually-hidden">Ползунок слайдера</span></button>
       </div>
-      <div class="examples__background-container">
-        <div class="examples__image-container">
-          <picture>
-            <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="images/index/cat-before/cat-before-tablet@1x.webp, images/index/cat-before/cat-before-tablet@2x.webp 2x">
-            <source width="280" height="256" type="image/webp" srcset="images/index/cat-before/cat-before-tablet@1x.webp, images/index/cat-before/cat-before-tablet@2x.webp 2x">
-
-            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/index/cat-before/cat-before-tablet@1x.png, images/index/cat-before/cat-before-tablet@2x.png 2x">
-            <img class="examples__before" src="images/index/cat-before/cat-before-mobile@1x.png" width="280" height="256" srcset="images/index/cat-before/cat-before-mobile@2x.png" alt="Фотография толстого кота">
-          </picture>
-          <picture>
-            <source media="(min-width: 768px)" width="560" height="512" type="image/webp" srcset="images/index/cat-after/cat-after-tablet@1x.webp, images/index/cat-after/cat-after-tablet@2x.webp 2x">
-            <source width="280" height="256" type="image/webp" srcset="images/index/cat-after/cat-after-tablet@1x.webp, images/index/cat-after/cat-after-tablet@2x.webp 2x">
-
-            <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/index/cat-after/cat-after-tablet@1x.png, images/index/cat-after/cat-after-tablet@2x.png 2x">
-            <img class="examples__after" src="images/index/cat-after/cat-after-mobile@1x.png" width="280" height="256" srcset="images/index/cat-after/cat-after-mobile@2x.png" alt="Фотография стройного кота">
-          </picture>
-          <button class="examples__button" type="button"><span class="visually-hidden">Ползунок слайдера</span></button>
-        </div>
       </div>
     </section>
 
     <section class="location">
       <h2 class="visually-hidden">Где нас найти</h2>
-      <div class="location__direction">
         <div class="location__container">
           <p class="location__text">Приглашаем<br> к сотрудничеству дилеров!</p>
           <address class="location__address">ул. Большая Конюшенная, д. 19/8 <p class="location__city">Санкт-Петербург</p>
           </address>
-        </div>
       </div>
       <div class="location__map">
         <iframe class="location__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037876728415!2d30.320472476866446!3d59.93871647491518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1716064716714!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -1,11 +1,6 @@
 .location {
   background-color: #f2f2f2;
-}
-
-.location__direction {
   position: relative;
-  max-width: 1220px;
-  margin: 0 auto;
 }
 
 .location__container {
@@ -17,24 +12,21 @@
   margin: 0 auto;
   padding: 25px 0;
 
-  background-color: #f2f2f2;
-
   @media (min-width: $tablet-width) {
     width: 100%;
     padding: 60px 70px;
     justify-content: space-between;
+    background-color: $secondary-color;
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     z-index: 1;
-
-    top: 94px;
-
+    top: 93px;
+    left: calc((100vw - 1220px) / 2);
     width: 563px;
-    padding: 62px 79px;
-
     background-color: $secondary-color;
+    padding: 61px 78px 60px 80px;
   }
 }
 
