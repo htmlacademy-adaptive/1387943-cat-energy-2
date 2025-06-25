@@ -123,6 +123,22 @@
   @include button;
   padding: 17px;
   font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba($secondary-color, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
 
   @media (min-width: $tablet-width) {
     width: 256px;
